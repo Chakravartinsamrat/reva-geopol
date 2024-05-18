@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #17a2b8;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar .logo img {
+    margin-top: 10px;
+    height: 60px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin:0;
+    margin-top: 25px;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+@media (max-width: 1920px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+    
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+
+/* carousel  */
+
+.Carousel{
+    height: 550px;
+}
+
+
+/* Events Containers */
+
+.Events-Section{
+    height: 550px;
+}
+
+/* about section */
+.about-section{
+    height: 550px;
+}
+
+/* Footer part */
+
+
+
+
+/* .Footer-Contents-Section{
+    flex: 0 0 20%;
+    max-width: 20%;
+} */
+.Footer-section-block{
+    margin-bottom: 54px;
+}
+.Underliner{
+    margin-bottom:54px;
+}
+.Underliner::after {
+    content: '';
+    margin-top: 1rem;
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #F8AE2E;
+}
