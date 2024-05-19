@@ -10,81 +10,223 @@
     <link rel="stylesheet" href="custom.styles.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="footer1.css">
-    <link rel="stylesheet"  href="output.css">
-    <title>Reva Geopol</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      html, body {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          overflow: auto;
+      }
+
+      .owl-carousel .item {
+          background-size: cover;
+          background-position: center;
+          height: 100vh; /* Full viewport height */
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow at the top */
+      }
+
+      .owl-carousel .owl-stage-outer {
+          height: 100%;
+      }
+
+      .owl-carousel .owl-stage {
+          height: 100%;
+      }
+
+      .owl-carousel .owl-item {
+          height: 100%;
+      }
+
+      .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #17a2b8; /* Initial translucent black background */
+    transition: background-color 0.6s;
+    padding: 5px 20px; /* Adjusted padding */
+    color: white;
+    z-index: 1000;
+}
+
+
+      .navbar.sticky {
+
+        transition: background-color 0.6s;
+          background-color: #17a2b8; /* Blue background when scrolled */
+      }
+
+      .NavlinkImg {
+          padding-top: 3rem;
+          width: 450px;
+          padding-bottom: 3rem;
+      }
+
+      .navbar .logo img {
+          height: 70px;
+          margin-left: 30px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+
+      .hamburger {
+          display: none;
+          font-size: 40px;
+          cursor: pointer;
+          color: white;
+      }
+
+      .nav-links {
+          display: none; /* Initially hide the nav links */
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          font-size: xx-large;
+          background-color: #17a2b8; /* Semi-transparent black background */
+          z-index: 1000; /* Ensure it appears above other content */
+          overflow-y: auto; /* Allow scrolling if the content exceeds the viewport height */
+      }
+
+      .nav-links.active {
+          display: block; /* Show the nav links when active */
+      }
+
+      .nav-links li {
+          text-align: left;
+          margin: 10px 0;
+          margin-left: 5rem;
+      }
+
+      @media (max-width: 1920px) {
+          .hamburger {
+              display: block;
+          }
+      }
+
+      .navbar ul {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .navbar ul li {
+          position: relative;
+          list-style: none;
+      }
+
+      .navbar ul li a {
+          position: relative;
+          margin: 0 15px;
+          text-decoration: none;
+          color: #fff;
+          letter-spacing: 2px;
+          font-weight: 500;
+          transition: 0.6s;
+      }
+
+      .banner {
+          position: relative;
+          width: 100%;
+          height: 100vh;
+          background-color: black;
+      }
+    </style>
 </head>
 <body>
-   <nav class="navbar" id="navbar">
-      <div class="logo">
-         <img src="/assets/REVALogo.png" alt="Logo">
-      </div>
-      <div class="hamburger" id="hamburger">
-         &#9776;
-      <div class="nav-links" id="nav-links">
-        <ul>
-         <li class="NavlinkImg">
+   <header>
+      <nav class="navbar" id="navbar">
+         <div class="logo">
             <img src="/assets/REVALogo.png" alt="Logo">
-         </li>
-           <li class="has-submenu">
-              <a href="https://www.reva.edu.in/about-reva">About REVA</a>
-              <ul class="submenu" id="submenu">
-               <!-- i cant style these links :( -->
-                                                   <li><a href="https://www.reva.edu.in/about-university">About University</a></li>
-                                                   <li><a href="https://www.reva.edu.in/rect">Rukmini Educational Charitable Trust</a></li>
-                                                   <li><a href="https://www.reva.edu.in/vision-mission">Vision, Mission, Values &amp; Objectives</a></li>
-                                                   <li><a href="https://www.reva.edu.in/chancellor-message">Chancellor's Message</a></li>
-                                                   <li><a href="https://www.reva.edu.in/pro-chancellors-message">Pro Chancellor's Message</a></li>
-                                                   <li><a href="https://www.reva.edu.in/vice-chancellor">Vice Chancellor's Message</a></li>
-                                                   <li><a href="https://www.reva.edu.in/registrar-s-message">Registrar's Message</a></li>
-                                                   <li><a href="https://www.reva.edu.in/internal-quality-assurance-cell">Internal Quality Assurance Cell</a></li>
-                                                   <li><a href="https://www.reva.edu.in/committees">Committees</a></li>
-                                                   <li><a href="https://www.reva.edu.in/regulatory-approvals">Regulatory Approvals</a></li>
-                                                   <li><a href="https://www.reva.edu.in/iste">ISTE</a></li>
-                                                   <li><a href="https://www.reva.edu.in/qs-rating">QS</a></li>
-                                                   <li><a href="https://www.reva.edu.in/divya-sree">DivyaSree</a></li>
-                                                  <li><a href="https://www.reva.edu.in/leadership-management">Leadership Management</a></li>
-                 
-              </ul>
-           </li>
-         <li>
-              <a href="Base.html">Main Page</a>                       
-           </li>
-           <li>
-              <a href="Collection.aspx">Collection</a>                       
-           </li>
-           <li>
-              <a href="Search.aspx">Search</a>                       
-           </li>
-         <li>
-              <a href="Mypage.aspx">My Account</a>                       
-           </li>
-              <li>
-              <a href="Services.aspx">Library Services </a>                       
-           </li>
-            <li>
-              <a href="E-Resources.aspx">E-Resources</a>                       
-           </li>
-         <li>
-              <a href="Usefull_link.aspx">Useful Links</a>                       
-           </li>
-         <li>
-              <a href="Rules_and_regulations.aspx">Rules and Regulations</a>                       
-           </li>
-        
-          <li>
-              <a href="Library_Timing.aspx">Library Timings</a>                       
-           </li>
-          <li>
-              <a href="Contact.aspx">Contact Details</a>                       
-           </li>
-
-         </ul>
          </div>
-      </div>
-   </nav>
-    <div class="Carousel">
-        <h1>Carousel:  YOU KNOW THIS PART BETTER THAN ME</h1>
-    </div>
+         <div class="hamburger" id="hamburger">
+            &#9776;
+         </div>
+         <div class="nav-links" id="nav-links">
+           <ul>
+            <li class="NavlinkImg">
+               <img src="/assets/REVALogo.png" alt="Logo">
+            </li>
+              <li class="has-submenu">
+                 <a href="https://www.reva.edu.in/about-reva">About REVA</a>
+                 <ul class="submenu" id="submenu">
+                    <li><a href="https://www.reva.edu.in/about-university">About University</a></li>
+                    <li><a href="https://www.reva.edu.in/rect">Rukmini Educational Charitable Trust</a></li>
+                    <li><a href="https://www.reva.edu.in/vision-mission">Vision, Mission, Values & Objectives</a></li>
+                    <li><a href="https://www.reva.edu.in/chancellor-message">Chancellor's Message</a></li>
+                    <li><a href="https://www.reva.edu.in/pro-chancellors-message">Pro Chancellor's Message</a></li>
+                    <li><a href="https://www.reva.edu.in/vice-chancellor">Vice Chancellor's Message</a></li>
+                    <li><a href="https://www.reva.edu.in/registrar-s-message">Registrar's Message</a></li>
+                    <li><a href="https://www.reva.edu.in/internal-quality-assurance-cell">Internal Quality Assurance Cell</a></li>
+                    <li><a href="https://www.reva.edu.in/committees">Committees</a></li>
+                    <li><a href="https://www.reva.edu.in/regulatory-approvals">Regulatory Approvals</a></li>
+                    <li><a href="https://www.reva.edu.in/iste">ISTE</a></li>
+                    <li><a href="https://www.reva.edu.in/qs-rating">QS</a></li>
+                    <li><a href="https://www.reva.edu.in/divya-sree">DivyaSree</a></li>
+                    <li><a href="https://www.reva.edu.in/leadership-management">Leadership Management</a></li>
+                 </ul>
+              </li>
+              <li><a href="Base.html">Main Page</a></li>
+              <li><a href="Collection.aspx">Collection</a></li>
+              <li><a href="Search.aspx">Search</a></li>
+              <li><a href="Mypage.aspx">My Account</a></li>
+              <li><a href="Services.aspx">Library Services</a></li>
+              <li><a href="E-Resources.aspx">E-Resources</a></li>
+              <li><a href="Usefull_link.aspx">Useful Links</a></li>
+              <li><a href="Rules_and_regulations.aspx">Rules and Regulations</a></li>
+              <li><a href="Library_Timing.aspx">Library Timings</a></li>
+              <li><a href="Contact.aspx">Contact Details</a></li>
+            </ul>
+         </div>
+      </nav>
+   </header>
+   <section class="banner desktop-banner">
+       <div class="owl-carousel hp-banner owl-theme">
+           <div class="item" style="background-image: url('assets/bg1.jpg')"></div>
+           <div class="item" style="background-image: url('assets/bg2.jpg')"></div>
+           <div class="item" style="background-image: url('assets/bg3.jpg')"></div>
+           <div class="item" style="background-image: url('assets/bg4.jpg')"></div>
+       </div>
+   </section>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script>
+       $(document).ready(function(){
+           $('.owl-carousel').owlCarousel({
+               loop: true,
+               margin: 0,
+               nav: false,
+               dots: false,
+               autoplay: true,
+               autoplayTimeout: 3000,
+               items: 1
+           });
+       });
+
+       window.addEventListener("scroll", function(){
+           var navbar = document.getElementById("navbar");
+           navbar.classList.toggle("sticky", window.scrollY > 0);
+           navbar.style.backgroundColor = window.scrollY > 0 ? '#17a2b8' : 'rgba(0, 0, 0, 0.7)';
+       });
+
+       const hamburger = document.getElementById('hamburger');
+       const navLinks = document.getElementById('nav-links');
+
+       hamburger.addEventListener('click', function() {
+           navLinks.classList.toggle('active');
+       });
+   </script>
+</body>
+</html>
+
     <div class="Events-Section">
         <h1 class="">Enter Very Cool Stuff here</h1>
     </div>
