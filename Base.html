@@ -20,7 +20,6 @@
       }    </style>
 </head>
 <body>
-   <header>
       <nav class="navbar" id="navbar">
          <div class="logo">
             <img src="/assets/REVALogo.png" alt="Logo">
@@ -65,7 +64,6 @@
             </ul>
          </div>
       </nav>
-   </header>
    <section class="banner desktop-banner">
        <div class="owl-carousel hp-banner owl-theme">
            <div class="item" style="background-image: url('assets/bg1.jpg')"></div>
@@ -76,33 +74,7 @@
    </section>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <script>
-       $(document).ready(function(){
-           $('.owl-carousel').owlCarousel({
-               loop: true,
-               margin: 0,
-               nav: false,
-               dots: false,
-               autoplay: true,
-               autoplayTimeout: 3000,
-               items: 1
-           });
-       });
-
-       window.addEventListener("scroll", function(){
-           var navbar = document.getElementById("navbar");
-           navbar.classList.toggle("sticky", window.scrollY > 0);
-           navbar.style.backgroundColor = window.scrollY > 0 ? '#17a2b8' : 'rgba(0, 0, 0, 0.7)';
-       });
-
-       const hamburger = document.getElementById('hamburger');
-       const navLinks = document.getElementById('nav-links');
-
-       hamburger.addEventListener('click', function() {
-           navLinks.classList.toggle('active');
-       });
-   </script>
-</body>
+  </body>
 </html>
 
     <div class="Events-Section">
