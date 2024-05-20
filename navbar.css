@@ -1,109 +1,157 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #17a2b8;
-    padding: 10px 20px;
-    color: white;
+.owl-carousel .item {
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow at the top */
 }
-.NavlinkImg{
+
+.owl-carousel .owl-stage-outer {
+    height: 100%;
+}
+
+.owl-carousel .owl-stage {
+    height: 100%;
+}
+
+.owl-carousel .owl-item {
+    height: 100%;
+}
+
+.navbar
+ {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: transparent; /* Initial translucent black background */
+transition: background-color 0.6s;
+padding: 5px 20px; /* Adjusted padding */
+color: white;
+z-index: 1000;
+}
+
+
+.navbar.sticky {
+
+  transition: background-color 0.6s;
+    background-color: #0096A1; /* Blue background when scrolled */
+}
+
+.NavlinkImg {
     padding-top: 3rem;
     width: 450px;
     padding-bottom: 3rem;
 }
-.logo img{
+
+.navbar .logo img {
     height: 70px;
     margin-left: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
+    transition: height 0.6s, margin 0.6s;
+
 }
 
-.hamburger {
+.hamburger
+{
     display: none;
     font-size: 40px;
     cursor: pointer;
-}
-
-.nav-links {
+  }
+  
+  .nav-links {
     display: none; /* Initially hide the nav links */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    font-size:xx-large;
-    background-color: rgba(0, 0, 0, 0.986); /* Semi-transparent black background */
+    font-size: x-large;
+    background-color: #444; /* Semi-transparent black background */
     z-index: 1000; /* Ensure it appears above other content */
-    overflow-y: auto; /* Allow scrolling if the content exceeds the viewport height */
-}
-
-.nav-links.active {
+    overflow-y: auto;
+    font-family:'Roboto Slab', serif; 
+  }
+  
+  .nav-links.active {
     display: block; /* Show the nav links when active */
-}
-
-.nav-links li {
+  }
+  
+  .nav-links li {
     text-align: left;
     margin: 10px 0;
     margin-left: 5rem;
-}
-
-@media (max-width: 1920px) {
+  }
+  
+  @media (max-width: 1920px) {
     .hamburger {
         display: block;
     }
+  }
+.has-submenu {
+    position: relative;
 }
 
-/* .submenu {
+.nav-links > .has-submenu > a {
+    display: block;
+    padding: 0px 20px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+}
+
+.nav-links > .has-submenu > a:hover {
+    background-color: #444;
+    color: #F8AE2E;
+
+}
+.submenu{
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    right: 200px;
+    background-color: #444;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 500px;
+    font-size: medium;
+}
+.submenu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.submenu > li > a:hover {
+    background-color: transparent;
+    color: #F8AE2E;
 }
 
 .has-submenu:hover .submenu {
     display: block;
 }
-
-.has-submenu {
+/*.banner {
     position: relative;
-}
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.025);
 
-.submenu {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 200px; /* Adjust width as needed */
-    /* background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} */
-
-/* .submenu li {
-    display: block;
-}
-
-.submenu li a {
-    display: block;
-    padding: 10px;
-    color: #ccc8c8;
-    text-decoration: none;
-}
-
-.submenu li a:hover {
-    background-color: #f0f0f0;
-} */ 
-
-/* carousel  */
-
-.Carousel{
-    height: 550px;
-}
+}*/
 
 
 /* Events Containers */
